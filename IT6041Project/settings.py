@@ -73,11 +73,15 @@ WSGI_APPLICATION = 'IT6041Project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+# https://github.com/nesdis/djongo
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'IT6041Project',
+        'CLIENT': {
+           'host': 'mongodb+srv://admin:admin@it6041project.mxz4f.mongodb.net/IT6041Project?retryWrites=true&w=majority',
+        }
     }
 }
 

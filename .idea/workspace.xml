@@ -15,6 +15,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1j8MycYtSAlnN2sphlffvdbLJAA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,13 +30,14 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\mackm\PycharmProjects\Ecommerce\EcommerceApp\static\EcommerceApp" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mackm\OneDrive\Documents\GitHub\IT6041Web\IT6041App\static" />
+      <recent name="C:\Users\mackm\OneDrive\Documents\GitHub\IT6041Web" />
+      <recent name="C:\Users\mackm\OneDrive\Documents\GitHub\IT6041Web\IT6041App" />
       <recent name="C:\Users\mackm\PycharmProjects\Ecommerce\Ecommerce" />
       <recent name="C:\Users\mackm\PycharmProjects\Ecommerce" />
-      <recent name="C:\Users\mackm\PycharmProjects\Ecommerce\Ecommerce\media" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mackm\PycharmProjects\Ecommerce\EcommerceApp\static\EcommerceApp" />
     </key>
   </component>
@@ -52,10 +56,10 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1603662595452">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1603876589495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1603662595452" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1603876589495" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1603184545007">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

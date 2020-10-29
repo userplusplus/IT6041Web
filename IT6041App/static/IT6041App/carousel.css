@@ -12,6 +12,10 @@ body h2 {
   font-name: Roboto;
 }
 
+body h1 {
+  text-align; center;
+}
+
 /* Top Navbar styling */
 .bg-dark {
     background-color: #5ed100!important;
@@ -29,22 +33,27 @@ body h2 {
 .carousel-caption {
   bottom: 3rem;
   z-index: 10;
+  color: #737373;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel slide {
-  background-color: ##ffc600;
+  background-color: #ffc600;
+}
+
+.carousel-indicators li{
+  background-color: #737373;
 }
 
 .carousel-item {
-  height: 32rem;
+  height: 40rem;
 }
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 32rem;
+  height: 36rem;
 }
 
 

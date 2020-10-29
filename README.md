@@ -9,3 +9,7 @@ Modules to install thus far
 MongoDB
 pip install djongo
 pip install dnspython
+
+Registration/User Login Forms
+pip install django-crispy-forms
+

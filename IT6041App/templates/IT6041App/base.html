@@ -18,6 +18,19 @@
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+      a {
+        text-decoration: none;
+        font-color: #737373;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      a:link, a:visited {
+        color: #737373;
+      }
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -41,28 +54,38 @@
        <div class="fixed-top">
         <div class="collapse" id="navbarToggleExternalContent">
           <div class="bg-dark p-4">
-            <h5 class="text-white h4">Profile</h5>
-            <span class="text-white h6">View Cart</span>
+            <h5 class="text-white h5">Profile</h5>
+            <p class="text-white h5">View Cart</p>
           </div>
         </div>
         <nav class="navbar navbar-dark bg-dark">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-            <h1 style="text-align:center;">Greenworld's</h1>
-          <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+            <a href="{% url 'index' %}" style="text-align:center;"><h1>Greenworld's</h1></a>
+            <a class="text-white h5" href=" {% url 'register' %}">Sign Up</a>
         </nav>
       </div>
 
     </div>
   </nav>
 </header>
-{% block content %}
 
-{% endblock content %}
+        {% if messages %}
+            {% for message in messages %}
+                <br>
+                <br>
+                <br>
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+
+        {% block content %}
+
+        {% endblock content %}
 
 
 

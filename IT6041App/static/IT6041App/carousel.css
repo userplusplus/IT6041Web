@@ -85,6 +85,10 @@ body h1 {
   margin-left: .75rem;
 }
 
+.container {
+  text-align: left;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 

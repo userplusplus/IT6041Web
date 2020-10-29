@@ -7,9 +7,9 @@ Web application for IT6041 final assessment.
 Modules to install thus far
 
 MongoDB
-pip install djongo
-pip install dnspython
+  pip install djongo
+  pip install dnspython
 
 Registration/User Login Forms
-pip install django-crispy-forms
+  pip install django-crispy-forms
 

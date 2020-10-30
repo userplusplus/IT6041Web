@@ -6,6 +6,10 @@ Web application for IT6041 final assessment.
 
 Modules to install thus far
 
+Django framework
+
+-- pip install django
+
 MongoDB
 
 -- pip install djongo

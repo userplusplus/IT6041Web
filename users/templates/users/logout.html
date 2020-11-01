@@ -1,0 +1,38 @@
+{% extends "IT6041App/base.html" %}
+
+{% block content %}
+
+<style>
+       .container {
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        align-items; center;
+
+      }
+
+      .content-section {
+        width: 100%;
+      }
+</style>
+
+<br>
+<br>
+<br>
+  <div class="container">
+      <div class="row">
+         <div class="col-12">
+            <h2>You have been logged out!</h2>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    <a href="{% url 'login' %}">Log In Now</a>
+                </small>
+            </div>
+         </div>
+      </div>
+  </div>
+
+
+
+
+{% endblock content %}

@@ -21,3 +21,8 @@ Registration/User Login Forms
 
 -- pip install django-crispy-forms
 
+
+01/11/20 
+Profile Window
+-- pip install Pillow
+

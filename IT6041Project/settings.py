@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'IT6041App.apps.IT6041appConfig',
-    'Users.apps.UsersConfig',
+    'users.apps.UsersConfig',
     'crispy_forms',
 ]
 
@@ -79,7 +79,8 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'IT6041Project',
         'CLIENT': {
-            'host': 'mongodb+srv://admin:admin@it6041project.mxz4f.mongodb.net/IT6041Project?retryWrites=true&w=majority',
+            'host':
+                'mongodb+srv://admin:admin@it6041project.mxz4f.mongodb.net/IT6041Project?retryWrites=true&w=majority',
         }
     }
 }
@@ -119,6 +120,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'index'
+
+LOGIN_URL = 'login'

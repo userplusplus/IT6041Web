@@ -41,6 +41,12 @@ class Voucher(models.Model):
     voucher_code = models.CharField(max_length=20)
     description = models.CharField(max_length=200)
 
+    class Meta:
+        ordering = ('-voucher_type',)
+
+    def __str__(self):
+        return self.voucher_type
+
     # Voucher example:
     # voucher_type = "Discount25"
     # voucher_code = "dh9277jd"

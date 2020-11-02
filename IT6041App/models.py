@@ -31,7 +31,17 @@ class Staff(models.Model):
     # to ensure filtered input to these strings however. 
 
     class Meta:
-        ordering = ('-staff_name',)
+        ordering = ('-staff_full_name',)
 
     def __str__(self):
         return self.staff_name
+
+class Voucher(models.Model):
+    voucher_type = models.CharField(max_length=40)
+    voucher_code = models.CharField(max_length=20)
+    description = models.CharField(max_length=200)
+
+    # Voucher example:
+    # voucher_type = "Discount25"
+    # voucher_code = "dh9277jd"
+    # description = "Get 25% off your current order."

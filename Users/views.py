@@ -15,4 +15,15 @@ def register(request):
         form = UserRegisterForm()
     return render(request, 'Users/register.html', {'form': form})
 
+def login(request):
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Successful login for {username}!')
+            return redirect('index')
+    else:
+        form = UserRegisterForm()
+    return render(request, 'Users/login.html', {'form': form})
+
 

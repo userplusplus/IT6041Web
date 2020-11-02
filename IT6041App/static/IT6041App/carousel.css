@@ -9,11 +9,11 @@ body {
 }
 
 body h2 {
-  font-name: Roboto;
+  font-family: Roboto;
 }
 
 body h1 {
-  text-align; center;
+  text-align: center;
 }
 
 /* Top Navbar styling */

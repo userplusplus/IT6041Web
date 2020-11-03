@@ -12,6 +12,7 @@ class Products(models.Model):
     image = models.ImageField()
     sku = models.CharField(max_length=20)
     stock_level = models.IntegerField()
+    no_of_sales = models.IntegerField()
 
     class Meta:
         ordering = ('-product_name',)

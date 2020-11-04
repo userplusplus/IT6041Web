@@ -14,9 +14,11 @@ class Products(models.Model):
     stock_level = models.IntegerField()
 
     class Meta:
+        verbose_name_plural = 'Products'
         ordering = ('-product_name',)
 
     def __str__(self):
         return self.product_name
+
 
 

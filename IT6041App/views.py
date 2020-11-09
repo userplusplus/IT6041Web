@@ -16,3 +16,7 @@ def cart(request):
 def checkout(request):
     context = {}
     return render(request, 'IT6041App/checkout.html', context)
+
+def staff(request):
+    staff = Staff.objects.all().filter(public_display = True)
+    return render(request, 'IT6041App/staff.html', {'title': 'GreenWorlds EcoStore', 'staff' : staff})

@@ -1,9 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
-
-# Create your models here.
-
+from PIL import Image
 
 class Products(models.Model):
     product_name = models.CharField(max_length=200)
@@ -13,6 +10,7 @@ class Products(models.Model):
     image = models.ImageField(null=True,  blank=True)
     sku = models.CharField(max_length=20)
     stock_level = models.IntegerField()
+    no_of_sales = models.IntegerField()
 
     class Meta:
         verbose_name_plural = 'Products'
@@ -66,3 +64,45 @@ class ShippingAddress(models.Model):
 
     def __str__(self):
         return self.address
+
+class Staff(models.Model):
+    staff_full_name = models.CharField(max_length=200)
+    work_email = models.EmailField(max_length=200)
+    work_phone = models.CharField(max_length=20)
+    mobile_phone = models.CharField(max_length=20)
+    department_role = models.CharField(max_length=200)
+    profile_image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    public_display = models.BooleanField()
+
+    class Meta:
+        ordering = ('-staff_full_name',)
+
+    def __str__(self):
+        return self.staff_full_name
+
+    def save(self):
+        super().save()
+
+        img = Image.open(self.profile_image.path)
+
+        if img.height > 300 or img.width > 250:
+            output_size = (300, 250)
+            img.thumbnail(output_size)
+            img.save(self.profile_image.path)
+
+
+class Voucher(models.Model):
+    voucher_type = models.CharField(max_length=40)
+    voucher_code = models.CharField(max_length=20)
+    description = models.CharField(max_length=200)
+
+    class Meta:
+        ordering = ('-voucher_type',)
+
+    def __str__(self):
+        return self.voucher_type
+
+    # Voucher example:
+    # voucher_type = "Discount25"
+    # voucher_code = "dh9277jd"
+    # description = "Get 25% off your current order."

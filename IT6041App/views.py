@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from .models import *
 
 
 def index(request):
-    context = {}
+    products = Products.objects.filter(category='Accessories')
+    context = {'products': products}
     return render(request, 'IT6041App/index.html', context)
 
 

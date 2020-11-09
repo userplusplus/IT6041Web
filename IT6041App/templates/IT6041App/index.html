@@ -104,44 +104,23 @@
     <br>
 
     <div class="row">
-        <div class="col-sm-4">
-            <div class="card">
-                <img class="thumbnail"  src="media/harmony-sofa-82-o.jpg">
-                <div class="box-element product">
-                    <h6><strong>Harmony Sofa</strong></h6>
-                    <hr>
-                    <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
-                    <a class="btn btn-outline-success" href="#">View</a>
-                    <h4 style="display: inline-block; float: right">$399.99</h4>
-                </div>
-            </div>
-        </div>
+        {% for i in products %}
 
-        <div class="col-sm-4">
-            <div class="card">
-                <img class="thumbnail"  src="/media/Sustainable_Cleaning_Brush.jpg">
-                <div class="box-element product">
-                    <h6><strong>Sustainable Cleaning Brush</strong></h6>
-                    <hr>
-                    <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
-                    <a class="btn btn-outline-success" href="#">View</a>
-                    <h4 style="display: inline-block; float: right">$4.99</h4>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img class="thumbnail"  src="{{ i.image.url }}">
+                        <div class="box-element product">
+                            <h6><strong>{{ i.product_name }}</strong></h6>
+                            <hr>
+                            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+                            <a class="btn btn-outline-success" href="#">View</a>
+                            <h4 style="display: inline-block; float: right">{{ i.price }}</h4>
+                        </div>
+                    </div>
+                    <br>
                 </div>
-            </div>
-        </div>
 
-        <div class="col-sm-4">
-            <div class="card">
-                <img class="thumbnail"  src="/media/Avocado-Green-Mattress-Dressers-Side-Tables-web-31.jpg">
-                <div class="box-element product">
-                    <h6><strong>Eco Wood Dresser</strong></h6>
-                    <hr>
-                    <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
-                    <a class="btn btn-outline-success" href="#">View</a>
-                    <h4 style="display: inline-block; float: right">$97.99</h4>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
     <br><br><br>
 {% endblock content %}

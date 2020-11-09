@@ -20,8 +20,7 @@
         min-height: 300px;
         width: 100%;
         display: block;
-        background-color: brown;
-    }
+   }
 
     .profile-name {
         text-align: left;
@@ -63,7 +62,7 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <div class="placement-image"></div>
+                    <img class="placement-image" src={{staff.image.url}} />
                     <br/>
                     <h5 class="profile-name">{{ i.staff_full_name }}</h5>
                     <h6 class="profile-title">{{ i.department_role }}</h6>

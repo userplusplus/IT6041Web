@@ -1,4 +1,5 @@
 from django.db import models
+from PIL import Image
 
 
 # Create your models here.
@@ -26,6 +27,7 @@ class Staff(models.Model):
     work_phone = models.CharField(max_length=20)
     mobile_phone = models.CharField(max_length=20)
     department_role = models.CharField(max_length=200)
+    profile_image = models.ImageField(default='default.jpg', upload_to='profile_pics')
     public_display = models.BooleanField()
 
     # Note that as in the WDD, Staff.department is effectively 3 different roles
@@ -37,6 +39,16 @@ class Staff(models.Model):
 
     def __str__(self):
         return self.staff_full_name
+
+    def save(self):
+        super().save()
+
+        img = Image.open(self.profile_image.path)
+
+        if img.height > 300 or img.width > 250:
+            output_size = (300, 250)
+            img.thumbnail(output_size)
+            img.save(self.profile_image.path)
 
 
 class Voucher(models.Model):

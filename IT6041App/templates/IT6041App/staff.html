@@ -31,13 +31,13 @@
     .profile-title {
         text-align: right;
         float: right;
+        max-width: 150px;
     }
 
     .profile {
         margin: auto;
     }
-</style>
-
+</style>    
 
 <div class="container">
     <div class="row">
@@ -57,91 +57,27 @@
         </div>
     </div>
 
-    <div class="row">
-
+    {% for i in staff %}
+        <!-- using the cycle tag, every 3 staff are in the same row -->
+        {% cycle '<div class="row justify-content-md-center">' '' ''%}
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <!--Image goes here-->
                     <div class="placement-image"></div>
                     <br/>
-                    <h5 class="profile-name">Name</h5>
-                    <h5 class="profile-title">CEO</h5>
+                    <h5 class="profile-name">{{ i.staff_full_name }}</h5>
+                    <h6 class="profile-title">{{ i.department_role }}</h6>
                     <br/><br/>
-                    <div class="card-text">Email: example@gmail.com</div>
-                    <div class="card-text">Phone: 221 1444 7670</div>
-                    <div class="card-text">Mobile: 022 345 6789</div>
+                    <div class="card-text">Email: {{ i.work_email }}</div>
+                    <div class="card-text">Phone: {{ i.work_phone }}</div>
+                    <div class="card-text">Mobile: {{ i.mobile_phone }}</div>
                 </div>
             </div>
         </div>
-
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <!--Image goes here-->
-                    <div class="placement-image"></div>
-                    <br/>
-                    <h5 class="profile-name">Name</h5>
-                    <h5 class="profile-title">CTO</h5>
-                    <br/><br/>
-                    <div class="card-text">Email: example@gmail.com</div>
-                    <div class="card-text">Phone: 221 1444 7670</div>
-                    <div class="card-text">Mobile: 022 345 6789</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <!--Image goes here-->
-                    <div class="placement-image"></div>
-                    <br/>
-                    <h5 class="profile-name">Name</h5>
-                    <h5 class="profile-title">Developer</h5>
-                    <br/><br/>
-                    <div class="card-text">Email: example@gmail.com</div>
-                    <div class="card-text">Phone: 221 1444 7670</div>
-                    <div class="card-text">Mobile: 022 345 6789</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="row justify-content-center">
-
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <!--Image goes here-->
-                    <div class="placement-image"></div>
-                    <br/>
-                    <h5 class="profile-name">Name</h5>
-                    <h5 class="profile-title">Accountant</h5>
-                    <br/><br/>
-                    <div class="card-text">Email: example@gmail.com</div>
-                    <div class="card-text">Phone: 221 1444 7670</div>
-                    <div class="card-text">Mobile: 022 345 6789</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <!--Image goes here-->
-                    <div class="placement-image"></div>
-                    <br/>
-                    <h5 class="profile-name">Name</h5>
-                    <h5 class="profile-title">Designer</h5>
-                    <br/><br/>
-                    <div class="card-text">Email: example@gmail.com</div>
-                    <div class="card-text">Phone: 221 1444 7670</div>
-                    <div class="card-text">Mobile: 022 345 6789</div>
-                </div>
-            </div>
-        </div>
+    {% cycle '' '' '</div>'%}
+    
+{% endfor %}
+<br />
 
     </div>
 </div>

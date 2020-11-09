@@ -26,6 +26,7 @@ class Staff(models.Model):
     work_phone = models.CharField(max_length=20)
     mobile_phone = models.CharField(max_length=20)
     department_role = models.CharField(max_length=200)
+    public_display = models.BooleanField()
 
     # Note that as in the WDD, Staff.department is effectively 3 different roles
     # that can be represented by the choice of 3 strings. We will have
@@ -35,7 +36,8 @@ class Staff(models.Model):
         ordering = ('-staff_full_name',)
 
     def __str__(self):
-        return self.staff_name
+        return self.staff_full_name
+
 
 class Voucher(models.Model):
     voucher_type = models.CharField(max_length=40)

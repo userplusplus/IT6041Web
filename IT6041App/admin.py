@@ -17,17 +17,17 @@ class ProductsAdmin(admin.ModelAdmin):
         return obj.product_name
 
 
-class CustomerAdmin(admin.ModelAdmin):
+class CustomersAdmin(admin.ModelAdmin):
     list_display = ('user',
                     'name',
                     'email',
                     )
 
-    def user(self, obj):
-        return obj.user
+    def customer(self, obj):
+        return obj.customer
 
 
-class OrderAdmin(admin.ModelAdmin):
+class OrdersAdmin(admin.ModelAdmin):
     list_display = ('customer',
                     'date_ordered',
                     'complete',
@@ -38,7 +38,7 @@ class OrderAdmin(admin.ModelAdmin):
         return obj.order
 
 
-class OrderItemAdmin(admin.ModelAdmin):
+class OrderItemsAdmin(admin.ModelAdmin):
     list_display = ('product',
                     'order',
                     'quantity',
@@ -63,7 +63,7 @@ class ShippingAddressAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Products, ProductsAdmin)
-admin.site.register(Customer)
-admin.site.register(Order)
-admin.site.register(OrderItem)
-admin.site.register(ShippingAddress)
+admin.site.register(Customer, CustomersAdmin)
+admin.site.register(Order, OrdersAdmin)
+admin.site.register(OrderItem, OrderItemsAdmin)
+admin.site.register(ShippingAddress, ShippingAddressAdmin)

@@ -36,7 +36,7 @@ class Customer(models.Model):
     email = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.name
+        return self.user, self.name, self.email
 
 
 class Order(models.Model):
@@ -46,7 +46,7 @@ class Order(models.Model):
     transaction_id = models.CharField(max_length=100, null=True)
 
     def __str__(self):
-        return str(self.id)
+        return str(self.id), self.customer, self.date_ordered, self.complete, str(self.transaction_id)
 
 
 class OrderItem(models.Model):

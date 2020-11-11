@@ -10,8 +10,8 @@ body {
 }
 
 body h1 {
-  font-name: Roboto;
-    text-align; center;
+  font-family: Roboto;
+    text-align: center;
 }
 
 /* Top Navbar styling */
@@ -127,11 +127,10 @@ body h1 {
 }
 
 .box-element {
-  box-shadow; hsl(0, 0%, 80%) 0 0 16px;
+  box-shadow: hsl(0, 0%, 80%) 0 0 16px;
   background-color: #fff;
   border-radius: 4px;
   padding: 10px;
-
 }
 
 .box-element-product {

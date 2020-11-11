@@ -6,6 +6,10 @@ Web application for IT6041 final assessment.
 
 Modules to install thus far
 
+Django framework
+
+-- pip install django
+
 MongoDB
 
 -- pip install djongo
@@ -16,4 +20,11 @@ MongoDB
 Registration/User Login Forms
 
 -- pip install django-crispy-forms
+
+
+01/11/20 
+
+Profile Window
+
+-- pip install Pillow
 

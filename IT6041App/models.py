@@ -68,7 +68,7 @@ class OrderItem(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.order
+        return str(self.order)
 
     @property
     def get_total(self):

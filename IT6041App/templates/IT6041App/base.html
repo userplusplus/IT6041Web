@@ -30,6 +30,35 @@
             transform: none;
           }
         }
+
+        /* CSS for animating burger menu button */
+        .burger-button {
+          display: inline-block;
+          cursor: pointer;
+          float: left;
+          margin: 5px
+        }
+
+        .bar1, .bar2, .bar3 {
+          width: 35px;
+          height: 5px;
+          background-color: #333;
+          margin: 6px 0;
+          transition: 0.4s;
+        }
+
+        .animate .bar1 {
+          -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+          transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        .animate .bar2 {opacity: 0;}
+
+        .animate .bar3 {
+          -webkit-transform: rotate(45deg) translate(-8px, -8px);
+          transform: rotate(45deg) translate(-8px, -8px);
+        }
+
     </style>
 
     <!-- Custom styles for this template -->
@@ -55,6 +84,10 @@
 		}
 		var csrftoken = getToken('csrftoken')
 
+    //JS for animating burger button menu change, adds or removes the class 'animate'
+    function menuClick(x) {
+      x.classList.toggle("animate");
+    }
     </script>
 
   </head>
@@ -63,6 +96,13 @@
             <div class="fixed-top">
                <!-- Top navigation -->
                 <div class="topnav">
+
+
+                  <button class="burger-button topnav-left" data-toggle="collapse" data-target="#menu-content" onclick="menuClick(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </button>
 
                   <!-- Centered link -->
                   <div class="topnav-centered">
@@ -93,6 +133,8 @@
                      </div>
                   {% endif%}
                 </div>
+            </div id="menu-content" class="collapse">
+              This is the menu content
             </div>
         </header>
       </body>

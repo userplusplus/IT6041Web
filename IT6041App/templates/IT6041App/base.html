@@ -36,7 +36,10 @@
           display: inline-block;
           cursor: pointer;
           float: left;
-          margin: 5px
+          margin-top: auto;
+          border: none;
+          background-color: transparent;
+          -moz-user-focus: none;
         }
 
         .bar1, .bar2, .bar3 {
@@ -87,6 +90,14 @@
     //JS for animating burger button menu change, adds or removes the class 'animate'
     function menuClick(x) {
       x.classList.toggle("animate");
+
+      eleDisp = document.getElementById("menu-content").style.display
+
+      if (eleDisp == "none"){
+        eleDisp = "block"
+      } else {
+        eleDisp = "none"
+      }
     }
     </script>
 
@@ -133,9 +144,26 @@
                      </div>
                   {% endif%}
                 </div>
-            </div id="menu-content" class="collapse">
-              This is the menu content
+            </div id="float-break">
             </div>
+
+            <div class="collapse navbar-collapse" id="menu-content">
+              <br />
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link scroll-link" href="#section-1">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link scroll-link" href="#section-2">Staff</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link scroll-link" href="#section-3">Item 3</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link scroll-link" href="#section-4">Item 4</a>
+                  </li>
+              </ul>
+          </div>
         </header>
       </body>
             {% if messages %}

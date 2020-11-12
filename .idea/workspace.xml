@@ -19,7 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c47cdc49-122d-49ad-9400-fa7708044cda" name="Default Changelist" comment="" />
+    <list default="true" id="c47cdc49-122d-49ad-9400-fa7708044cda" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT6041App/templates/IT6041App/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/templates/IT6041App/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT6041App/templates/IT6041App/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/templates/IT6041App/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT6041App/templates/IT6041App/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/templates/IT6041App/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT6041Project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041Project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Users/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../D_Drive/Python Practises/RandomNumbersLotto.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IT6041Web-Charles-New" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -94,10 +101,10 @@
     </state>
     <state x="3074" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604465853768" />
     <state x="844" y="258" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1605072335786" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1604864849807">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605175830012">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1604864849807" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1605175830012" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1604198297265">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

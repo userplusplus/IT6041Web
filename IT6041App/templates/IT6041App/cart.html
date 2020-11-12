@@ -12,7 +12,7 @@
 				<div class="cart-row">
 					<a class="btn btn-outline-dark" href="{% url 'index' %}">Continue Shopping</a>
 					<div style="flex:1"></div>
-					<div style="flex:1" align="center"><strong>Item</strong></div>
+					<div style="flex:1" align="left"><strong>Item</strong></div>
 					<div style="flex:1" align="center"><strong>Price</strong></div>
 					<div style="flex:1" align="center"><strong>Quantity</strong></div>
 					<div style="flex:1" align="center"><strong>Total</strong></div>
@@ -20,7 +20,7 @@
 				{% for item in items %}
 					<div class="cart-row">
 						<div style="flex:2"><img class="row-image" src="{{ item.product.imageURL }}"></div>
-						<div style="flex:1" align="center"><p>{{ item.product.product_name }}</p></div>
+						<div style="flex:1" align="left"><p>{{ item.product.product_name }}</p></div>
 						<div style="flex:1" align="center"><p>{{ item.product.price|floatformat:2 }}</p></div>
 						<div style="flex:1" align="center">
 							<p class="quantity">x{{ item.quantity }}</p>

@@ -31,7 +31,7 @@
           }
         }
 
-        /* CSS for animating burger menu button */
+        /* Burger Button and Menu */
         .burger-button {
           display: inline-block;
           cursor: pointer;
@@ -40,6 +40,11 @@
           border: none;
           background-color: transparent;
           -moz-user-focus: none;
+        }
+
+        .burger-button:focus {
+          outline: none;
+          box-shadow: none;
         }
 
         .bar1, .bar2, .bar3 {
@@ -60,6 +65,20 @@
         .animate .bar3 {
           -webkit-transform: rotate(45deg) translate(-8px, -8px);
           transform: rotate(45deg) translate(-8px, -8px);
+        }
+
+        #menu-content{
+          margin-top: 20px;
+          background-color: white;
+        }
+
+        #menu-content li {
+          padding-left: 5px; 
+          border-bottom: lightgrey 1px solid;
+        }
+
+        #menu-content li:hover {
+          background-color: lightgray;
         }
 
     </style>
@@ -109,7 +128,7 @@
                 <div class="topnav">
 
 
-                  <button class="burger-button topnav-left" data-toggle="collapse" data-target="#menu-content" onclick="menuClick(this)">
+                  <button class="burger-button topnav-left" data-toggle="collapse" data-target="#menu-content" onclick="menuClick(this)" title="Menu">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                     <div class="bar3"></div>
@@ -117,7 +136,7 @@
 
                   <!-- Centered link -->
                   <div class="topnav-centered">
-                      <a href="{% url 'index' %}" class="active"><h1>GreenWorld's</h1></a>
+                      <a href="{% url 'index' %}" class="active" title="Home page"><h1>GreenWorld's</h1></a>
                   </div>
 
                   <!-- Left-aligned links (default) -->
@@ -144,23 +163,33 @@
                      </div>
                   {% endif%}
                 </div>
+
             </div id="float-break">
             </div>
 
             <div class="collapse navbar-collapse" id="menu-content">
-              <br />
+              
               <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                      <a class="nav-link scroll-link" href="#section-1">Home</a>
+                      <a class="nav-link scroll-link" href="{% url 'index' %}">Home</a>
                   </li>
-                  <li class="nav-item">
-                      <a class="nav-link scroll-link" href="#section-2">Staff</a>
+
+                  {% if user.is_authenticated %}
+                    <li class="nav-item">
+                      <a class="nav-link scroll-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                  {% else %}
+                    <li class="nav-item">
+                      <a class="nav-link scroll-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link scroll-link" href="{% url 'register' %}">Register</a>
                   </li>
+                  {% endif %}
+
+                  
                   <li class="nav-item">
-                      <a class="nav-link scroll-link" href="#section-3">Item 3</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link scroll-link" href="#section-4">Item 4</a>
+                      <a class="nav-link scroll-link" href="{% url 'staff' %}">Staff</a>
                   </li>
               </ul>
           </div>

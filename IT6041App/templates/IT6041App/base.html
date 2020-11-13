@@ -33,6 +33,7 @@
 
         /* Burger Button and Menu */
         .burger-button {
+          width:35px;
           display: inline-block;
           cursor: pointer;
           float: left;
@@ -127,12 +128,14 @@
                <!-- Top navigation -->
                 <div class="topnav">
 
-
-                  <button class="burger-button topnav-left" data-toggle="collapse" data-target="#menu-content" onclick="menuClick(this)" title="Menu">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                  </button>
+                  <div class="topnav-left">
+                    <button class="burger-button nav-item nav-link" data-toggle="collapse" data-target="#menu-content" onclick="menuClick(this)" title="Menu">
+                      <div class="bar1"></div>
+                      <div class="bar2"></div>
+                      <div class="bar3"></div>
+                    </button>
+                  </div>
+                  
 
                   <!-- Centered link -->
                   <div class="topnav-centered">

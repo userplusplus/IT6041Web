@@ -68,14 +68,21 @@
           transform: rotate(45deg) translate(-8px, -8px);
         }
 
-        #menu-content{
-          margin-top: 20px;
+        #menu-content {
+          /*margin-top: 20px;*/
           background-color: white;
+          position: -webkit-sticky; /* Safari */
+          position: fixed;
+          z-index: 1; /* ensure div displays over content*/
+          width: 100vw;
+          top: 69px;
         }
 
         #menu-content li {
           padding-left: 5px; 
           border-bottom: lightgrey 1px solid;
+          z-index: 2; /* ensure links displays over content*/
+          width: 100%;
         }
 
         #menu-content li:hover {
@@ -107,7 +114,7 @@
 		}
 		var csrftoken = getToken('csrftoken')
 
-    //JS for animating burger button menu change, adds or removes the class 'animate'
+    //JS for animating burger button menu change, toggles animation
     function menuClick(x) {
       x.classList.toggle("animate");
 

@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6feb7752-6b0c-4817-a6c3-7dbd0f6162ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IT6041Project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IT6041Web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IT6041Web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IT6041App/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IT6041App/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IT6041App/static/IT6041App/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/static/IT6041App/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IT6041App/static/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/static/js/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IT6041App/templates/IT6041App/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/templates/IT6041App/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IT6041App/templates/IT6041App/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/templates/IT6041App/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IT6041App/templates/IT6041App/staff.html" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/templates/IT6041App/staff.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IT6041App/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

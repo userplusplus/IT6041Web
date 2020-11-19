@@ -18,7 +18,7 @@ def index(request):
         order = {'get_cart_total': 0, 'get_cart_items': 0, 'shipping': False}
         cartItems = order['get_cart_items']
 
-    products = Products.objects.all()
+    products = Products.objects.filter(popular='True')
     context = {'products': products, 'cartItems': cartItems}
     return render(request, 'IT6041App/index.html', context)
 

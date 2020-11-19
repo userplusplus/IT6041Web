@@ -1,5 +1,10 @@
 from django.contrib import admin
-from .models import Products, Customer, Order, OrderItem, ShippingAddress
+from .models import Products, \
+    Customer, \
+    Order, \
+    OrderItem, \
+    ShippingAddress, \
+    Staff
 
 
 # Register your models here.
@@ -63,8 +68,23 @@ class ShippingAddressAdmin(admin.ModelAdmin):
         return obj.shippingitem
 
 
+class StaffAdmin(admin.ModelAdmin):
+    list_display = ('staff_full_name',
+                    'work_email',
+                    'work_phone',
+                    'mobile_phone',
+                    'department_role',
+                    'profile_image',
+                    'public_display',
+                    )
+
+    def staff(self, obj):
+        return obj.staff_full_name
+
+
 admin.site.register(Products, ProductsAdmin)
 admin.site.register(Customer, CustomersAdmin)
 admin.site.register(Order, OrdersAdmin)
 admin.site.register(OrderItem, OrderItemsAdmin)
 admin.site.register(ShippingAddress, ShippingAddressAdmin)
+admin.site.register(Staff, StaffAdmin)

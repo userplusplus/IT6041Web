@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from PIL import Image
 
+
 class Products(models.Model):
     product_name = models.CharField(max_length=200)
     category = models.CharField(max_length=200, default='')
@@ -85,6 +86,7 @@ class ShippingAddress(models.Model):
     def __str__(self):
         return self.address
 
+
 class Staff(models.Model):
     staff_full_name = models.CharField(max_length=200)
     work_email = models.EmailField(max_length=200)
@@ -95,10 +97,11 @@ class Staff(models.Model):
     public_display = models.BooleanField()
 
     class Meta:
+        verbose_name_plural = 'Staff Members'
         ordering = ('-staff_full_name',)
 
     def __str__(self):
-        return self.staff_full_name
+        return str(self.id)
 
     def save(self):
         super().save()

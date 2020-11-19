@@ -3,7 +3,6 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-top: 3rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
   background-color: #f0f0f0;
@@ -55,8 +54,9 @@ body h1 {
   transform: translate(-50%, -50%);
 }
 
-.topnav-left {
+.topnav-left a {
   float: left;
+  color: #737373;
 }
 
 .topnav-right {
@@ -70,7 +70,6 @@ body h1 {
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
-  margin-top: 4rem;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {

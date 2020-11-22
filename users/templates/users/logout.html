@@ -15,7 +15,31 @@
       .content-section {
         width: 100%;
       }
+
+      #cart-icon {
+          width: 30px;
+          height: 30px;
+
+      }
+
+      .topnav-right {
+        float: right;
+       }
+
 </style>
+    <br><br>
+      <div class="container">
+          <div class="row">
+             <div class="col-12">
+                <h2>You have been logged out!</h2>
+                <div class="border-top pt-3">
+                    <h6>
+                        <a href="{% url 'login' %}">Log In Now</a>
+                    </h6>
+                </div>
+             </div>
+          </div>
+      </div>
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -71,17 +95,6 @@
             </a>
     </div>
 
-  <div class="container">
-      <div class="row">
-         <div class="col-12">
-            <h2>You have been logged out!</h2>
-            <div class="border-top pt-3">
-                <h4>
-                    <a href="{% url 'login' %}">Log In Now</a>
-                </h4>
-            </div>
-         </div>
-      </div>
-  </div>
-<br><br><br>
+
+
 {% endblock content %}

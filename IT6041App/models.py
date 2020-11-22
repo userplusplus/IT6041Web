@@ -13,6 +13,7 @@ class Products(models.Model):
     stock_level = models.IntegerField()
     no_of_sales = models.IntegerField(default='0')
     popular = models.BooleanField(default=False, null=True, blank=True)
+    digital = models.BooleanField(default=False, null=True, blank=True)
 
     class Meta:
         verbose_name_plural = 'Products'

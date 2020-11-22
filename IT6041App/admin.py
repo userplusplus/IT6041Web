@@ -17,6 +17,7 @@ class ProductsAdmin(admin.ModelAdmin):
                     'stock_level',
                     'image',
                     'popular',
+                    'digital',
                     )
 
     def product_name(self, obj):

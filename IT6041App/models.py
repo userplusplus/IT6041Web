@@ -99,10 +99,11 @@ class Staff(models.Model):
     public_display = models.BooleanField()
 
     class Meta:
+        verbose_name_plural = 'Staff Members'
         ordering = ('-staff_full_name',)
 
     def __str__(self):
-        return self.staff_full_name
+        return str(self.id)
 
     def save(self):
         super().save()

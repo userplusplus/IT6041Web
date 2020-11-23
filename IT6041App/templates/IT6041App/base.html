@@ -13,7 +13,7 @@
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
           crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
 
         /* Responsive navigation menu (for mobile devices) */
@@ -30,15 +30,79 @@
             transform: none;
           }
         }
+
+        /* Burger Button and Menu */
+        .burger-button {
+          width:35px;
+          display: inline-block;
+          cursor: pointer;
+          float: left;
+          margin-top: auto;
+          border: none;
+          background-color: transparent;
+          -moz-user-focus: none;
+        }
+
+        .burger-button:focus {
+          outline: none;
+          box-shadow: none;
+        }
+
+        .bar1, .bar2, .bar3 {
+          width: 35px;
+          height: 5px;
+          background-color: #333;
+          margin: 6px 0;
+          transition: 0.4s;
+        }
+
+        .animate .bar1 {
+          -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+          transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        .animate .bar2 {opacity: 0;}
+
+        .animate .bar3 {
+          -webkit-transform: rotate(45deg) translate(-8px, -8px);
+          transform: rotate(45deg) translate(-8px, -8px);
+        }
+
+        #menu-content {
+          /*margin-top: 20px;*/
+          background-color: transparent;
+          position: -webkit-sticky; /* Safari */
+          position: fixed;
+          z-index: 1; /* ensure div displays over content*/
+          width: 100vw;
+          top: 69px;
+        }
+
+        #menu-content li {
+          padding-left: 1px;
+          z-index: 2; /* ensure links displays over content*/
+          width: 100%;
+        }
+
+        #menu-content a:hover {
+          background-color: #e1cda8;
+        }
+
+        .nav-item a {
+          color: #737373;
+          background-color: #5ed100;;
+        }
+
+
     </style>
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="{% static 'IT6041App/main.css' %}">
 
     <script type="text/javascript">
-        var user = '{{ request.user }}'
+		var user = '{{request.user}}'
 
-        function getToken(name) {
+		function getToken(name) {
 		    var cookieValue = null;
 		    if (document.cookie && document.cookie !== '') {
 		        var cookies = document.cookie.split(';');
@@ -55,6 +119,47 @@
 		}
 		var csrftoken = getToken('csrftoken')
 
+		function getCookie(name) {
+		    // Split cookie string and get all individual name=value pairs in an array
+		    var cookieArr = document.cookie.split(";");
+
+		    // Loop through the array elements
+		    for(var i = 0; i < cookieArr.length; i++) {
+		        var cookiePair = cookieArr[i].split("=");
+
+		        /* Removing whitespace at the beginning of the cookie name
+		        and compare it with the given string */
+		        if(name == cookiePair[0].trim()) {
+		            // Decode the cookie value and return
+		            return decodeURIComponent(cookiePair[1]);
+		        }
+		    }
+
+		    // Return null if not found
+		    return null;
+		}
+		var cart = JSON.parse(getCookie('cart'))
+
+		if (cart == undefined){
+			cart = {}
+			console.log('Cart Created!', cart)
+			document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
+		}
+		console.log('Cart:', cart)
+
+    //JS for animating burger button menu change, toggles animation
+    function menuClick(x) {
+      x.classList.toggle("animate");
+
+      eleDisp = document.getElementById("menu-content").style.display
+
+      if (eleDisp == "none"){
+        eleDisp = "block"
+      } else {
+        eleDisp = "none"
+      }
+    }
+
     </script>
 
   </head>
@@ -64,9 +169,18 @@
                <!-- Top navigation -->
                 <div class="topnav">
 
+                  <div class="topnav-left">
+                    <button class="burger-button nav-item nav-link" data-toggle="collapse" data-target="#menu-content" onclick="menuClick(this)" title="Menu">
+                      <div class="bar1" ></div>
+                      <div class="bar2"></div>
+                      <div class="bar3"></div>
+                    </button>
+                  </div>
+
+
                   <!-- Centered link -->
                   <div class="topnav-centered">
-                      <a href="{% url 'index' %}" class="active"><h1>GreenWorld's</h1></a>
+                      <a href="{% url 'index' %}" class="active" title="Home page"><h1>GreenWorld's</h1></a>
                   </div>
 
                   <!-- Left-aligned links (default) -->
@@ -87,13 +201,40 @@
                             <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
                             <a class="nav-item nav-link" href="{% url 'cart' %}">
                              <img id="cart-icon" src="{% static 'media/cart.jpg' %}">
-                             <p id="cart-total">0</p>
+                             <p id="cart-total">{{ cartItems }}</p>
                             </a>
                         </div>
                      </div>
                   {% endif%}
                 </div>
             </div>
+
+            <div class="collapse navbar-collapse" id="menu-content">
+
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link scroll-link" href="{% url 'index' %}">Home</a>
+                  </li>
+
+                  {% if user.is_authenticated %}
+                    <li class="nav-item">
+                      <a class="nav-link scroll-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                  {% else %}
+                    <li class="nav-item">
+                      <a class="nav-link scroll-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link scroll-link" href="{% url 'register' %}">Register</a>
+                  </li>
+                  {% endif %}
+
+
+                  <li class="nav-item">
+                      <a class="nav-link scroll-link" href="{% url 'staff' %}">Staff</a>
+                  </li>
+              </ul>
+          </div>
         </header>
       </body>
             {% if messages %}
@@ -115,6 +256,16 @@
         <p>&copy; 2017-2020 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
     </main>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>

@@ -11,8 +11,9 @@ class Products(models.Model):
     image = models.ImageField(null=True, blank=True)
     sku = models.CharField(max_length=20)
     stock_level = models.IntegerField()
-    no_of_sales = models.IntegerField(default='0')
+    no_of_sales = models.IntegerField(default='0', null=True, blank=True)
     popular = models.BooleanField(default=False, null=True, blank=True)
+    digital = models.BooleanField(default=False, null=True, blank=True)
 
     class Meta:
         verbose_name_plural = 'Products'

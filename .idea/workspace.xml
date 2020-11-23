@@ -20,8 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c47cdc49-122d-49ad-9400-fa7708044cda" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/IT6041App/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT6041App/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT6041App/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT6041App/static/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/static/js/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT6041App/templates/IT6041App/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/templates/IT6041App/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IT6041App/templates/IT6041App/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/templates/IT6041App/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT6041App/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IT6041App/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/IT6041App/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +52,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../IT6041Web-Charles-New" />

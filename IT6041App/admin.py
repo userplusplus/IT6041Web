@@ -57,7 +57,7 @@ class ShippingAddressAdmin(admin.ModelAdmin):
                     'address',
                     'city',
                     'post_code',
-                    'date_added',
+                    'country',
                     )
 
     def shippingitem(self, obj):

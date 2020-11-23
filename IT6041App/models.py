@@ -83,10 +83,11 @@ class ShippingAddress(models.Model):
     address = models.CharField(max_length=200, null=False)
     city = models.CharField(max_length=200, null=False)
     post_code = models.CharField(max_length=200, null=False)
-    date_added = models.DateTimeField(auto_now_add=True)
+    country = models.CharField(default='', null=True, max_length=200)
 
     def __str__(self):
         return self.address
+
 
 class Staff(models.Model):
     staff_full_name = models.CharField(max_length=200)

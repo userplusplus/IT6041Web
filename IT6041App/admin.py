@@ -17,6 +17,7 @@ class ProductsAdmin(admin.ModelAdmin):
                     'stock_level',
                     'image',
                     'popular',
+                    'digital',
                     )
 
     def product_name(self, obj):
@@ -61,7 +62,7 @@ class ShippingAddressAdmin(admin.ModelAdmin):
                     'address',
                     'city',
                     'post_code',
-                    'date_added',
+                    'country',
                     )
 
     def shippingitem(self, obj):

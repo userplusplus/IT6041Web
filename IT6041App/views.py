@@ -110,3 +110,8 @@ def staff(request):
     products = Products.objects.filter(category='Clothing')
     context = {'products': products, 'cartItems': cartItems, 'staff': staff}
     return render(request, 'IT6041App/staff.html', context)
+
+
+def privacy(request):
+    page_title = 'Privacy Policy'
+    return render(request, 'IT6041App/privacy.html', {'page_title': page_title})
